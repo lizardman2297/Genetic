@@ -1,6 +1,8 @@
+// config
 const genomeLength = 8;
 const individuNb = 10;
 
+// generate
 function generateGenome(){
     var genome = [];
     for (let i = 0; i < genomeLength; i++) {
@@ -19,16 +21,27 @@ function generatePop(){
 
 function displayPop(pop){
     pop.forEach(individu => {
-        console.log(individu);
         var genomeLine = document.createElement("p");
-        genomeLine.classList.add("test");
-        genomeLine.innerHTML = individu;
+        genomeLine.classList.add("popNotSort");
+        genomeLine.innerHTML = individu + " - " + getScore(individu);
         document.getElementById("main").appendChild(genomeLine);
+
     });
     var line = document.createElement("hr");
     document.getElementById("main").appendChild(line);
 }
 
+function getScore(individu){
+    var score = 0
+    individu.forEach(gene => {
+        if (gene == 1) {
+            score = score + 1;
+        }
+    })
+    return score;
+}
+
+// sort
 function sortPop(){
 
 }
