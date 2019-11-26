@@ -1,5 +1,5 @@
 // config
-const genomeLength = 8;
+const genomeLength = 16;
 const individuNb = 10;
 
 // generate
@@ -23,7 +23,7 @@ function displayPop(pop){
     pop.forEach(individu => {
         var genomeLine = document.createElement("p");
         genomeLine.classList.add("popNotSort");
-        genomeLine.innerHTML = individu + " - " + getScore(individu);
+        genomeLine.innerHTML = individu + " - score : " + getScore(individu);
         document.getElementById("main").appendChild(genomeLine);
 
     });
@@ -43,5 +43,15 @@ function getScore(individu){
 
 // sort
 function sortPop(){
+    
+}
 
+
+
+
+// Clear
+function clear(){
+    document.getElementsByClassName("popNotSort").forEach(element => {
+        element.innerHTML = "";
+    });
 }

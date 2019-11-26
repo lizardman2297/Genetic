@@ -13,7 +13,9 @@
 
     <button id="btGenerate" onclick="generatePop()">Generate</button>
     <button id="btSort" onclick="sortPop()">Sort</button>
+    <button id="btClear" onclick="clear()">Clear</button>
 
+    
 
 </body>
 </html>
