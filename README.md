@@ -1,2 +1,2 @@
-# geneticAlgo
+# genetic
 --------
